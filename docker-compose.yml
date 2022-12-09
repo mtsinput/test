@@ -8,3 +8,7 @@ service:
       - 80:80
     volumes:
       - ~/volume:/my_volume
+    deploy:
+      endpoint_mode: dnsrr # DNS round-robin for own load balancer HAProxy
+      mode: replicated
+      replicas: 3
