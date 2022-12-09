@@ -11,4 +11,4 @@ service:
     deploy:
       endpoint_mode: dnsrr # DNS round-robin for own load balancer HAProxy
       mode: replicated
-      replicas: 1
+      replicas: 2
