@@ -4,3 +4,7 @@ version: 3.6
 service:
   some_service:
     image: test_image
+    ports:
+      - 80:80
+    volumes:
+      - ~/volume:/my_volume
