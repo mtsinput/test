@@ -4,3 +4,11 @@ version: 3.6
 service:
   some_service:
     image: test_image
+    ports:
+      - 80:80
+    volumes:
+      - ~/volume:/my_volume
+    deploy:
+      endpoint_mode: dnsrr # DNS round-robin for own load balancer HAProxy
+      mode: replicated
+      replicas: 3
